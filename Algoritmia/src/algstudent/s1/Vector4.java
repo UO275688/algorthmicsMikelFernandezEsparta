@@ -26,15 +26,14 @@ public class Vector4 {
 	  for(int i = n_min; i <= n_max; i += n_step) {
 		  v = new int[i];
 		  Vector1.fillIn(v);
-		  int[] m = new int[2];
+		  /*int[] m = new int[2];
 		  
 		  for(int j = 0; j < nTimes; j++) {
 			  long start = System.currentTimeMillis();
 			  Vector1.maximum(v, m);
 			  long end = System.currentTimeMillis();	
 			  long t = (end - start);
-			  System.out.println("The time taken to execute " + i + " repetitions " + j + " was " + t + " milliseconds");
+			  System.out.println("The time taken to execute " + i + " repetitions " + j + " was " + t + " milliseconds");*/
 		  }		  
 	  }	  
 	} 
-}
