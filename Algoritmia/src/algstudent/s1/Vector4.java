@@ -33,7 +33,7 @@ public class Vector4 {
 			  Vector1.maximum(v, m);
 			  long end = System.currentTimeMillis();	
 			  long t = (end - start);
-			  System.out.println("The time taken to execute " + i + " repetitions" + j + "eeeeeee was " + t + " milliseconds");
+			  System.out.println("The time taken to execute " + i + " repetitions " + j + " was " + t + " milliseconds");
 		  }		  
 	  }	  
 	} 
