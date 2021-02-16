@@ -19,9 +19,13 @@ public class Vector3 {
 	public Vector1 v1 = new Vector1();
 	
 	public static void main(String arg []){
-	  int n_step = (int) (1e6 * Integer.parseInt(arg[0]));
-	  int n_min = (int) (1e6 * Integer.parseInt(arg[1]));
-	  int n_max = (int) (1e6 * Integer.parseInt(arg[2]));
+	  int n_step = (int) (1e5 * Integer.parseInt(arg[0]));
+	  int n_min = (int) (1e5 * Integer.parseInt(arg[1]));
+	  int n_max = (int) (1e5 * Integer.parseInt(arg[2]));
+		
+		/*int n_step = Integer.parseInt(arg[0]);
+		int n_min = Integer.parseInt(arg[1]);
+		int n_max = Integer.parseInt(arg[2]);*/
 	  
 	  for(int i = n_min; i <= n_max; i += n_step) {
 		  v = new int[i];
