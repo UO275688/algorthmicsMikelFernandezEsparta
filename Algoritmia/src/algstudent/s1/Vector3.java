@@ -19,25 +19,22 @@ public class Vector3 {
 	public Vector1 v1 = new Vector1();
 	
 	public static void main(String arg []){
-	  int n_step = (int) (1e5 * Integer.parseInt(arg[0]));
-	  int n_min = (int) (1e5 * Integer.parseInt(arg[1]));
-	  int n_max = (int) (1e5 * Integer.parseInt(arg[2]));
+		int n_max = (int) (Integer.parseInt(arg[0]));
+		int nTimes = (int) (Integer.parseInt(arg[1]));
 		
-		/*int n_step = Integer.parseInt(arg[0]);
-		int n_min = Integer.parseInt(arg[1]);
-		int n_max = Integer.parseInt(arg[2]);*/
-	  
-	  for(int i = n_min; i <= n_max; i += n_step) {
+		for(int i = 10; i <= n_max; i *= 3) {
 		  v = new int[i];
-		  Vector1.fillIn(v);
-		  int[] m = new int[2];
+		  
+		  //int[] m = new int[2];
 		  
 		  long start = System.currentTimeMillis();
-		  Vector1.maximum(v, m);
+		  Vector1.fillIn(v);
+		  //Vector1.sum(v);
+		  //Vector1.maximum(v, m);
 		  long end = System.currentTimeMillis();
-		  
-		  System.out.println("The time taken to execute " + i + " repetitions was " + (end - start) + " milliseconds");
-	  }
-	  
+		  long t = (end - start);
+		  float time = (float)t/nTimes;
+		  System.out.println("The time taken to execute "+  i + " was " + time + " milliseconds");
+	  }	  
 	} 
 }

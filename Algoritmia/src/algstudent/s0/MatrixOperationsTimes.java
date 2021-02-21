@@ -1,22 +1,28 @@
 package algstudent.s0;
 
-import algstudent.s1.Vector1;
-
 public class MatrixOperationsTimes {
 	
-	final static int MIN_DIMENSION = 2;
-	static int[] v;
-	int matrix[][];
-	//private List<Integer> values = new ArrayList<>();
+	static int matrix[][];
+	//private MatrixOperations mo = new MatrixOperations();
 
 	public static void main(String arg []){
-		int n = Integer.parseInt(arg[0]); //Size of the problem in the first argument
-		v = new int[n];
-		Vector1.fillIn(v);
-		long start = System.currentTimeMillis();
-		Vector1.sum(v);
-		long end = System.currentTimeMillis();
-		 
-		System.out.println("The time taken to execute " + n + " repetitions was " + (end - start) + " milliseconds");
+		//int n = Integer.parseInt(arg[0]); //Size of the problem in the first argument
+		//int n_max = (int) (Integer.parseInt(arg[0]));
+		int nTimes = (int) (Integer.parseInt(arg[0]));
+		
+		for(int i = 10; i <= 1771470; i *= 3) { 
+			matrix = new int[i][i];
+			MatrixOperations.fillIn(matrix);
+			
+			long start = System.currentTimeMillis();
+			  for(int j = 0; j < nTimes; j++) {			  
+				  //MatrixOperations.sumDiagonal1(matrix);
+				  MatrixOperations.sumDiagonal2(matrix);		  
+			  }	
+			  long end = System.currentTimeMillis();	
+			  long t = (end - start);
+			  float time = (float) t/nTimes;
+			  System.out.println("The time taken to execute "+  i + " was " + time + " milliseconds");
+		}			
 	} 
 }

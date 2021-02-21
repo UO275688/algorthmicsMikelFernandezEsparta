@@ -109,15 +109,16 @@ public class MatrixOperations {
 	 *  sumDiagonal1(). Computes the summation of all the elements of the matrix diagonal. 
 	 *  This implementation must iterate over all the matrix elements, but only sums appropriate elements. 
 	 *  So, the complexity is quadratic.
+	 * @param matrix2 
 	 */
-	public int sumDiagonal1() {
+	public static int sumDiagonal1(int[][] matrix2) {
 		int sum = 0;
 		
 		int i = 0;
-		int j = matrix[0].length -1;
+		int j = matrix2[0].length -1;
 		
-		while(i < matrix.length && j >= 0) {
-			sum += matrix[i][j];
+		while(i < matrix2.length && j >= 0) {
+			sum += matrix2[i][j];
 	    	i++;
 	    	j--;
 	    }
@@ -131,12 +132,12 @@ public class MatrixOperations {
 	 * diagonal. This second version should only consider the elements of the 
 	 * main diagonal. So, the complexity is linear.
 	 */
-	public int sumDiagonal2() {
+	public static int sumDiagonal2(int[][] matrix2) {
 		int sum = 0;
 		
-		for (int i =0; i < matrix.length; i++){
-	    	for (int j = 0; j < matrix[0].length; j++){
-	    		sum += matrix[i][j];
+		for (int i =0; i < matrix2.length; i++){
+	    	for (int j = 0; j < matrix2[0].length; j++){
+	    		sum += matrix2[i][j];
 	    	}
 	    }
 		
@@ -183,4 +184,14 @@ public class MatrixOperations {
 		write();
 
 	}
+	
+	public static void fillIn(int[][] a){
+		  Random r = new Random();
+		  int n = a.length;
+		  for(int i=0; i<n; i++) {
+			  for(int j = 0; j < a[0].length; j++) {
+				     a[i][j] = r.nextInt(199) - 99; //values between -99 and 99
+			  }
+		  }
+		}   
 }
