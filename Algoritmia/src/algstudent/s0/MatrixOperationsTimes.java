@@ -1,15 +1,11 @@
-package algstudent.s1;
-
-import algstudent.s0.MatrixOperations;
+package algstudent.s0;
 
 public class MatrixOperationsTimes {
 	
 	static int matrix[][];
-	//private MatrixOperations mo = new MatrixOperations();
 
 	public static void main(String arg []){
-		//int n = Integer.parseInt(arg[0]); //Size of the problem in the first argument
-		//int n_max = (int) (Integer.parseInt(arg[0]));
+
 		int nTimes = (int) (Integer.parseInt(arg[0]));
 		
 		for(int i = 10; i <= 1771470; i *= 3) { 
