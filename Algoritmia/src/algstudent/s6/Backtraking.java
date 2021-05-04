@@ -19,8 +19,9 @@ public class Backtraking {
 	
 	public void showLists(String file, int max){
 		readFile(file);
-		showListOfSongs();		
-		backtracking(0);				
+		showListOfSongs();
+		for(int i = 0; i < 10; i++)
+			backtracking(i);				
 		showBlocks();
 	}
 	
